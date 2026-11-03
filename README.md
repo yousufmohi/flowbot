@@ -65,7 +65,3 @@ A problem card
 | `/import` | Import your full solve history |
 | `/unlink` | Disconnect your account |
 | `/setup` | Server settings (admins) |
-
-## About
-
-I built flow for my own study group. The code is private for now, but if you want to know how something works, open an issue and ask.

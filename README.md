@@ -7,9 +7,17 @@
 <p align="center">A Discord bot for grinding LeetCode with your friends.</p>
 
 <p align="center">
-  <a href="https://discord.com/oauth2/authorize?client_id=1424614581355155568&permissions=536923136&scope=applications.commands+bot">Add to Discord</a>
-  •
-  <a href="https://flowbot.fyi">Website</a>
+  <a href="https://discord.com/oauth2/authorize?client_id=1424614581355155568&permissions=536923136&scope=applications.commands+bot"><img src="https://img.shields.io/badge/Add%20to%20Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Add to Discord"></a>
+</p>
+
+<p align="center">
+  <a href="https://flowbot.fyi"><img src="https://img.shields.io/badge/website-flowbot.fyi-8B7BFF" alt="Website"></a>
+  <img src="https://img.shields.io/badge/go-1.26-00ADD8?logo=go&logoColor=white" alt="Go 1.26">
+  <img src="https://img.shields.io/badge/commands-10-5865F2" alt="10 commands">
+</p>
+
+<p align="center">
+  <a href="#features">Features</a>
   •
   <a href="#commands">Commands</a>
   •
@@ -55,6 +63,15 @@ Link your LeetCode account and flow keeps track of what you solve. Every day you
 | `/setup` | Server settings (admins) |
 
 ## How it's built
+
+<p>
+  <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go">
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel">
+  <img src="https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase">
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
+  <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions">
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js">
+</p>
 
 The bot is written in Go and runs on Vercel as a single HTTP endpoint, so there's no always-on process. Discord only gives you 3 seconds to answer, which shaped a lot of it: every command has a time budget, and anything slow (like drawing images) happens outside the reply. Data lives in Supabase (Postgres), and the scheduled stuff (syncing solves, updating the board, the morning reads) runs on GitHub Actions.
 

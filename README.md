@@ -12,8 +12,6 @@
 
 <p align="center">
   <a href="https://flowbot.fyi"><img src="https://img.shields.io/badge/website-flowbot.fyi-8B7BFF" alt="Website"></a>
-  <img src="https://img.shields.io/badge/go-1.26-00ADD8?logo=go&logoColor=white" alt="Go 1.26">
-  <img src="https://img.shields.io/badge/commands-10-5865F2" alt="10 commands">
 </p>
 
 <p align="center">
@@ -26,24 +24,30 @@
 
 ---
 
-Link your LeetCode account and flow keeps track of what you solve. Every day your server gets a live board of who solved what, there's a leaderboard for the week, and `/next` always has a problem ready from whatever list you're working through.
+Link your LeetCode account and flow tracks what you solve. Your server gets a daily board of who solved what and a weekly leaderboard. `/next` gives you the next problem from your study list.
 
 ## Features
 
-- Live daily board that updates as people solve
-- Weekly recap and leaderboards (week, month, all time)
+- Live daily board that updates through the day
+- Weekly recap and a week / month / all-time leaderboard
 - Study lists: NeetCode 150, Blind 75, Grind 75, LeetCode Top 150
 - Streaks, with one free missed day a month
-- Read the problem and the starter code without leaving Discord
-- Import your past solves, not just new ones
+- Problem statements and starter code right in Discord
+- Import your solve history
 - Optional morning reading list for the server (Hacker News, Reddit, X)
 - Admins set everything up in one place with `/setup`
 
 ## Screenshots
 
+The daily board
+
 <img src="images/live-board.png" width="600" alt="Live daily board">
 
+The weekly leaderboard
+
 <img src="images/leaderboard.png" width="600" alt="Weekly leaderboard">
+
+A problem card
 
 <img src="images/problem-card.png" width="600" alt="Problem card">
 

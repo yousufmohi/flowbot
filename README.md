@@ -19,9 +19,9 @@
 <p align="center">
   <a href="#features">Features</a>
   •
-  <a href="#commands">Commands</a>
+  <a href="#screenshots">Screenshots</a>
   •
-  <a href="#how-its-built">How it's built</a>
+  <a href="#commands">Commands</a>
 </p>
 
 ---
@@ -61,27 +61,6 @@ Link your LeetCode account and flow keeps track of what you solve. Every day you
 | `/import` | Import your full solve history |
 | `/unlink` | Disconnect your account |
 | `/setup` | Server settings (admins) |
-
-## How it's built
-
-<p>
-  <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go">
-  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel">
-  <img src="https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase">
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
-  <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions">
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js">
-</p>
-
-The bot is written in Go and runs on Vercel as a single HTTP endpoint, so there's no always-on process. Discord only gives you 3 seconds to answer, which shaped a lot of it: every command has a time budget, and anything slow (like drawing images) happens outside the reply. Data lives in Supabase (Postgres), and the scheduled stuff (syncing solves, updating the board, the morning reads) runs on GitHub Actions.
-
-The images are drawn by a small Node service with satori. Leaderboards are served from a signed URL, so Discord fetches the picture after the reply instead of waiting on it.
-
-A few things I had fun figuring out:
-
-- Importing history without ever touching your LeetCode login. A bookmarklet reads the list on leetcode.com and hands it over in the URL fragment, which browsers don't send to servers.
-- Keeping the morning reads cheap. All the articles get scored once a day in one model call, and each server's picks come from plain code after that, so it costs the same for one server or a hundred.
-- X Articles. For a while the bot found none at all. Turned out the search couldn't tell an article from a tweet, so it had to search for article links directly.
 
 ## About
 
